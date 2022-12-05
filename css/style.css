@@ -1,0 +1,807 @@
+/* FONTES UTILIZADAS */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Open+Sans:wght@300&display=swap');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans';
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 100%;
+    position: relative;
+}
+
+/* Css BODY */
+body {
+    background-repeat: repeat;
+    background-position: center;
+    background-position: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-clip: content-box;
+    background-blend-mode: darken;
+}
+
+
+/* Início - css HEADER */
+header {
+    margin: 0rem;
+    background-color: #000000;
+    box-shadow: 0px 3px 10px #123275;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px;
+    display: flex;
+}
+
+.logo h1 {
+    margin-left: 5%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.gradient {
+    background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
+    color: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul a:hover {
+    color: #0099ff;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.login-button button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #0099ff;
+    margin-top: 0.65rem;
+}
+
+.login-button button a {
+    font-family: 'Josefin Sans';
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu ul a:hover {
+    color: #0099ff;
+}
+
+@media screen and (max-width: 1100px) {
+    .nav-bar {
+        padding: 1rem;
+        justify-content: center;
+        padding-left: 5.5rem;
+        padding-right: 5rem;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    .login-button {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin: 1.5rem;
+    }
+
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .mobile-menu .login-button {
+        display: block;
+        padding: 1rem 2rem;
+    }
+
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+
+    .open {
+        display: block;
+    }
+}
+/* Fim - css HEADER */
+
+
+/* Início - css Barra de pesquisa */
+.search-container {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 1.5rem;
+}
+
+.search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.search-icon::before {
+    content: '';
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+    border: 2px solid #0099ff;
+}
+
+.search-icon::after {
+    content: '';
+    width: 20%;
+    height: 2px;
+    background-color: #0099ff;
+}
+
+.search-input {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding-left: 40px;
+    transition: all 0.7s;
+}
+
+.search-input:focus {
+    width: 250px;
+    box-shadow: 5px 5px 5px #123275;
+}
+
+.search-input:valid {
+    width: 250px;
+}
+
+/* Fim - css Barra de tarefas */
+
+
+/* Início - css Cards Produtos */
+.container {
+    margin: 0 auto;
+    padding: 3rem 3rem;
+}
+
+.container .title {
+    font-size: 3.5rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 0rem;
+    text-align: center;
+    padding: 0rem;
+}
+
+.container .ofertas {
+    font-family: 'Open Sans';
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: inherit;
+    margin: 10rem 0 5rem 0;
+    text-align: center;
+}
+
+.container .produtos {
+    font-family: 'Open Sans';
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: inherit;
+    margin: 5rem;
+    text-align: center;
+}
+
+.container .products-container {
+    padding: 0rem 10rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 5rem;
+}
+
+.container .products-container .product {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    outline: .1rem solid #ff0000;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+    border-radius: 3rem;
+}
+
+.container .products-container .product:hover {
+    outline: .2rem solid #aa0303;
+    outline-offset: 0;
+}
+
+.container .products-container .product img {
+    height: 25rem;
+}
+
+.container .products-container .product:hover img {
+    transform: scale(.9);
+}
+
+.container .products-container .product h3 {
+    padding: .5rem 0;
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+}
+
+.container .products-container .product:hover h3 {
+    color: #440aa3;
+}
+
+.container .products-container .product .price {
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+}
+
+/* Css Cards Sobrepostos */
+.products-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(66, 66, 104, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.products-preview .preview {
+    display: none;
+    padding: .5rem;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    position: relative;
+    margin: 0rem;
+    width: 40rem;
+    border-radius: 15px;
+}
+
+.products-preview .preview.active {
+    display: inline-block;
+    position: relative;
+
+}
+
+.products-preview .preview img {
+    height: 30rem;
+}
+
+.products-preview .preview .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    color: #444;
+    font-size: 4rem;
+}
+
+.products-preview .preview .fa-times:hover {
+    transform: rotate(90deg);
+}
+
+.products-preview .preview h3 {
+    color: rgb(0, 0, 0);
+    padding: .5rem 0;
+    font-size: 2.5rem;
+}
+
+.products-preview .preview .stars {
+    padding: 1rem 0;
+    font-size: 1.7rem;
+}
+
+.products-preview .preview .stars i {
+    color: #ffc400;
+}
+
+.products-preview .preview .stars span {
+    color: rgb(0, 0, 0);
+}
+
+.products-preview .preview p {
+    line-height: 1.5;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: rgb(117, 117, 117);
+}
+
+.products-preview .preview .price {
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    color: #229A00;
+}
+
+.products-preview .preview .buttons {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.products-preview .preview .buttons a {
+    flex: 1 1 16rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: rgb(0, 0, 0);
+    border: .1rem solid rgb(0, 0, 0);
+    border-radius: .7rem;
+}
+
+.products-preview .preview .buttons a.cart {
+    background: #444;
+    color: #fff;
+}
+
+.products-preview .preview .buttons a.cart:hover {
+    background: #111;
+}
+
+.products-preview .preview .buttons a.buy:hover {
+    background: #229A00;
+    color: rgb(255, 255, 255);
+}
+
+
+@media (max-width: 900px) {
+
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 1100px) {
+
+    .products-preview .preview img {
+        height: 25rem;
+        position: relative;
+    }
+}
+
+@media (max-width: 900px) {
+
+    html {
+        font-size: 50%;
+    }
+}
+/* Fim - css Cards Produtos*/
+
+
+
+/* ITENS DAS PÁGINAS */
+
+/* Início - css Texto da Página Quem Somos */
+.title {
+    margin: 4rem;
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 3rem;
+    text-align: center;
+    padding: 0rem;
+}
+
+.texto {
+    width: 40%;
+    margin: 0 auto;
+    font-family: 'Open Sans';
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: inherit;
+    margin-bottom: 7rem;
+    text-align: center;
+    text-align: center;
+}
+/* Fim - css Texto da Página Quem Somos */
+
+
+/* Início - css Texto da Página Carrinho */
+.texto_carrinho {
+    margin: 15rem;
+    text-align: center;
+    text-align: center;
+}
+
+.title_carrinho {
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 3rem;
+    text-align: center;
+    padding: 0rem;
+}
+/* Fim - css Texto da Página Carrinho */
+
+
+/* Início - css Formulário */
+.w50 {
+    width: 50%;
+}
+
+.box {
+    max-width: 50%;
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(40px);
+    padding: 30px 40px;
+    width: 50%;
+    border-radius: 20px;
+    width: 465px;
+    height: 624px;
+}
+
+.form-box h2 {
+    font-size: 30px;
+}
+
+.form-box p {
+    font-weight: bold;
+    color: #3D3D3D;
+}
+
+.form-box p a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.form-box form {
+    margin: 20px 0;
+}
+
+form .input-group {
+    margin-bottom: 15px;
+}
+
+form .input-group label {
+    color: #3D3D3D;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form .input-group input {
+    width: 100%;
+    height: 47px;
+    background-color: rgba(255, 255, 255, 0.32);
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid transparent;
+    padding: 15px;
+    font-size: 15px;
+    color: #616161;
+    transition: all 0.4s ease;
+}
+
+form .input-group input:focus {
+    border-color: #92b4ff;
+}
+
+form .input-group button {
+    width: 100%;
+    height: 47px;
+    background: #0099ff;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+@media (max-width: 1100px) {
+    .box {
+        width: 700px;
+    }
+
+    .form-box {
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width:500px) {
+    .w50 {
+        width: 100%;
+        padding: 0;
+    }
+}
+/* Fim - css Formulário */
+
+
+/* Início - css Login */
+.form-box_login {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(40px);
+    padding: 30px 40px;
+    width: 50%;
+    border-radius: 20px;
+    width: 465px;
+    height: 350px;
+    margin-bottom: 4rem;
+}
+/* Fim - css Login */
+
+
+
+
+
+/* Início - css FOOTER */
+
+footer {
+    position: relative;
+    bottom: 0;
+}
+
+@media (max-height: 600px) {
+    footer {
+        position: relative;
+    }
+}
+
+.footer-distributed {
+    background-color: #2d2a30;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+    width: 30%;
+}
+
+.footer-distributed h3 {
+    color: #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    font-family: 'Open Sans';
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 42px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: #0099ff;
+    text-decoration: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+    font-family: 'Open Sans';
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 41px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+    background-color: #0099ff;
+}
+
+.footer-links a:hover {
+    color: #0099ff;
+}
+
+.fab {
+    font-family: "Font Awesome 5 Brands";
+}
+
+.fa-facebook-f {
+    content: "\f39e";
+}
+
+.fa-twitter {
+    content: "\f099";
+}
+
+.fa-instagram {
+    content: "\f16d";
+}
+
+
+
+@media (max-width: 1100px) {
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+}
+/* Fim - css FOOTER */
